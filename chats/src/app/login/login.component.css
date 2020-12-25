@@ -1,0 +1,49 @@
+
+.container-full{
+    align-items: center;
+    background: rgb(192, 191, 191);
+    height:100vh;
+    width: 100vw;
+
+}
+
+.forms{
+    padding: 20px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    background: white;
+    border-radius: 20px;
+   box-shadow: 2px 2px 2px 2px rgba(0px, 0px, 0px, .6);
+  
+}
+.form-full{
+    max-width: 400px;  
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.form-control{
+    box-shadow: none;
+    outline: none;
+}
+.form-control:focus{
+     border: 1px solid  rgb(7, 81, 131);
+}
+.btn{
+    width: 100%;
+    background: rgb(7, 81, 131);
+    border: none;
+    box-shadow: none;
+    color: white;
+}
+.btn:hover{
+    background: white;
+    border: 1px solid  rgb(7, 81, 131);
+    color: black;
+}
+.btn:focus{
+    background:  rgb(7, 81, 131);
+    color: white;
+}
