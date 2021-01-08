@@ -31,6 +31,13 @@
 h3 strong{
     color:#317daf ;
 }
+.rounded {
+    background: #075183;
+  
+}
+.media-body{
+    padding-right: 40px;
+}
 .btn{
     padding: 10px;
     width: 100%;

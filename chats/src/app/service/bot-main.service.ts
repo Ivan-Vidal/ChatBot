@@ -1,6 +1,5 @@
   
 import { HttpClient } from '@angular/common/http';
-import { environment } from './../../../environments/environment';
 import { Injectable } from '@angular/core';
 
 
@@ -8,9 +7,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class MainBotService {
-
-  readonly token = environment.dialogFlow.angularBot;
+export class BotMainService {
 
   constructor(private http:HttpClient) { }
 
@@ -24,7 +21,7 @@ export class MainBotService {
     },
     {
        headers:{
-      Authorization:'Bearer ' + environment.dialogFlow.angularBot
+      Authorization:'Bearer ' + 'e228c76aa6a54ce9b14a33b0980aacdf'
     }})
   }
 
