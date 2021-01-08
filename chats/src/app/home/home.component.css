@@ -4,6 +4,9 @@
     bottom: 54px;
     text-align: center;
     justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
 }
 .form-input{
     padding-left: 20px;
@@ -18,6 +21,16 @@
 .form-input:focus{
     border: 1px solid  #075183;
 }
+
+ h3{
+     font-size: 3.5rem;
+    color: #075183;
+    text-align: center;
+
+}
+h3 strong{
+    color:#317daf ;
+}
 .btn{
     padding: 10px;
     width: 100%;
@@ -27,6 +40,7 @@
     background: white;
     border: 1px solid  #075183;
     transition: ease-in .3s;
+    margin-top: 50px;
 }
 .btn:hover{
   background: rgb(224, 224, 224);
@@ -37,5 +51,20 @@
 }
 .send{
     max-width: 20px;
-    margin-left:5px ;
+    margin-left:.5rem;
+}
+.res{
+    justify-content: right;
+    text-align: right;
+}
+.pro-res{
+    width: 300px;
+    border-radius: 20px;
+    background: #075183;
+    padding: 15px;
+}
+@media(min-width: 540px){
+.btn{
+margin-top: auto;
+}
 }

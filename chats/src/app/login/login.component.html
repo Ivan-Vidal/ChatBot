@@ -1,6 +1,9 @@
 <div class="container-full">
   
+  <div class="forms-containers">
 <form class="form-full" (ngSubmit)="login()" [formGroup]="loginForm">
+  <h3>The <strong>Pandora</strong></h3>
+  
   <div class="forms">
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">E-mail</label>
@@ -10,7 +13,11 @@
       <label for="exampleInputPassword1" class="form-label">Senha</label>
       <input type="password" class="form-control"  formControlName="password" id="password" required>
     </div>
-    <button type="submit" class="btn">Entrar</button>
+    <button type="submit" class="btn btn-send">Entrar</button>
   </div>
   </form>
+</div>
+<div class="img-container">
+  <img class="img-chats" src="../../assets/img/chat.svg" alt="Chat">
+    </div>
 </div>

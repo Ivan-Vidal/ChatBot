@@ -1,0 +1,22 @@
+.navbar{
+    background:linear-gradient(#12324760, #0966a360);
+    height: 60px;
+    margin-bottom: 60px;
+    color: white;
+   
+}
+
+
+h3{
+   color: #075183;
+   text-align: center;
+
+}
+h3 strong{
+   color:#317daf ;
+}
+
+.nav-item{
+    cursor: pointer;
+    color: #075183;
+}
