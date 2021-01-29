@@ -1,4 +1,4 @@
-.hab{
+.hab {
     width: 100%;
     position: absolute;
     bottom: 54px;
@@ -9,7 +9,7 @@
     padding: 10px;
     margin-top: 40px;
 }
-.form-input{
+.form-input {
     padding-left: 20px;
     width: 100%;
     max-width: 400px;
@@ -19,7 +19,7 @@
     border: 1px solid black;
     outline: none;
 }
-.form-input:focus{
+.form-input:focus {
     border: 1px solid  #075183;
 }
 
@@ -29,7 +29,7 @@
     text-align: center;
 
 }
-h3 strong{
+h3 strong {
     color:#317daf ;
 }
 .rounded {
@@ -37,9 +37,7 @@ h3 strong{
    
   
 }
-.msg{
-    margin-bottom: 60px !important;
-}
+
 .media-body{
     padding-right: 40px;
 }
