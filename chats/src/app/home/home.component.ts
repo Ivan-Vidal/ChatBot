@@ -1,5 +1,6 @@
 import { Component, Input, OnInit, ViewChild, ElementRef, ViewChildren, QueryList, AfterViewInit } from '@angular/core';
 import { discardPeriodicTasks } from '@angular/core/testing';
+import { BotMainService } from '../service/bot-main.service';
 
 
 @Component({
@@ -8,10 +9,8 @@ import { discardPeriodicTasks } from '@angular/core/testing';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  http: any;
-  bot: any;
 
-  constructor() { }
+  constructor(private bot:BotMainService) { }
 
   ngOnInit(): void {
   }
@@ -31,6 +30,7 @@ export class HomeComponent implements OnInit {
   messages:any[] = [
     
   ]
+
 
   inputMsg:string;
 
@@ -56,22 +56,4 @@ export class HomeComponent implements OnInit {
 
     this.inputMsg = "";
   }
-
-  
-  talk(msg) {
-    return this.http.post("https://api.dialogflow.com/v1/query?v=20150910", {
-
-      "lang": "pt-br",
-      "query": msg,
-      "sessionId": "12345",
-
-    },
-      {
-        headers:
-        {
-          Authorization: 'Bearer ' +  'e228c76aa6a54ce9b14a33b0980aacdf'
-        }
-      })
-  }
-
 }

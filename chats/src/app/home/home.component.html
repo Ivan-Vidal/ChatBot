@@ -2,28 +2,41 @@
 
 <div class="container-full">
     <app-navbar></app-navbar>
+
+    <div class="row" style="justify-content: center;">
+      <img *ngIf="messages.length == 0" src="..//..//assets/img/start.svg" alt=""  class="icon-start">
+      <div class="col-12 ">
+          <div class="px-4 py-5 chat-box bg-white">
+          
+           <ul #messageContainer [hidden]="messages.length == 0">
+               <div *ngFor="let ctx of messages" >
+                <div  *ngIf="ctx.user == 'sender'"class="media w-50 mb-3">
+                  <img src="https://i.pinimg.com/736x/fd/a1/3b/fda13b9d6d88f25a9d968901d319216a.jpg" alt="" class="rounded-circle" width="100">
+            <div class="media-body ml-3">
+                      <div class="bg-light rounded py-2 px-3 mb-2">
+                        <p Emoji class="text-small mb-0 text-muted">{{ctx.msg}}</p>
+                      </div>
+                      <p class="small text-muted">{{ctx.data | date:'hh:mm a | MMM d'}}</p>
+                    </div>
+                  </div>
+          
+          
+                  <div *ngIf="ctx.user == 'reciever'" class="media w-50 ml-auto mb-3">
+                      <div class="media-body">
+                        <div class=" rounded py-2 px-3 mb-2 msg">
+                          <p Emoji class="text-small mb-0 text-white"> {{ctx.msg}}</p>
+                        </div>
+                        <p class="small text-muted">{{ctx.data | date:'hh:mm a | MMM d'}}</p>
+                      </div>
+                    </div>
+               </div>
+              
+           </ul>
+      
+          </div>
+
    
 
-
-    <div class="media w-50 mb-3">
-        <img src="https://i.pinimg.com/736x/fd/a1/3b/fda13b9d6d88f25a9d968901d319216a.jpg" alt="" class="rounded-circle" width="100">
-  <div class="media-body ml-3">
-            <div class="bg-light rounded py-2 px-3 mb-2">
-              <p Emoji class="text-small mb-0 text-muted">Olá meu nome é Jarvis!</p>
-            </div>
-            <p class="small text-muted"> 23:23 | 23 jan  </p>
-          </div>
-        </div>
-        <div class="media w-50 ml-auto mb-3">
-            <div class="media-body">
-              <div class=" rounded py-2 px-3 mb-2">
-                <p Emoji class="text-small mb-0 text-white">Olá</p>
-              </div>
-              <p class="small text-muted">23:12 | 20 jan</p>
-            </div>
-          </div>
-
     <div class="hab">
-        <input type="text" class="form-input" placeholder="Digite sua Menagem"> <button class="btn "> Enviar <img src="../../assets/img/send-button.svg"  class="send" alt=""></button>
+        <input type="text" (keyup.enter)="submit()" [(ngModel)]="inputMsg" class="form-input" placeholder="Digite sua Menagem"> <button class="btn" type="submit" (click)="submit()"> Enviar <img src="../../assets/img/send-button.svg"  class="send" alt=""></button>
     </div>
-</div>
