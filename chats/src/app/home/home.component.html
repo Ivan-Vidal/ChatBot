@@ -6,7 +6,7 @@
     <div class="row" style="justify-content: center;">
       <img *ngIf="messages.length == 0" src="..//..//assets/img/start.svg" alt=""  class="icon-start">
       <div class="col-12 ">
-          <div class="px-4 py-5 chat-box bg-white">
+          <div class="px-4 py-5 chat-box bg-white" >
           
            <ul #messageContainer [hidden]="messages.length == 0">
                <div *ngFor="let ctx of messages" >
@@ -38,5 +38,8 @@
    
 
     <div class="hab">
-        <input type="text" (keyup.enter)="submit()" [(ngModel)]="inputMsg" class="form-input" placeholder="Digite sua Menagem"> <button class="btn" type="submit" (click)="submit()"> Enviar <img src="../../assets/img/send-button.svg"  class="send" alt=""></button>
+        <input type="text"   (keyup.enter)="submit()" [(ngModel)]="inputMsg" class="form-input" placeholder="Digite sua Menagem"> <button class="btn" type="submit" (click)="submit()"> Enviar <img src="../../assets/img/send-button.svg"  class="send" alt=""></button>
     </div>
+      </div>
+    </div>
+</div>

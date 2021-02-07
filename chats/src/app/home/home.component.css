@@ -73,6 +73,9 @@ h3 strong {
     background: #075183;
     padding: 15px;
 }
+.chat-box{
+    margin-bottom: 100px;
+}
 @media(min-width: 540px){
 .btn{
 margin-top: auto;
